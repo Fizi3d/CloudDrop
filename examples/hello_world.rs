@@ -24,8 +24,8 @@ async fn main() -> anyhow::Result<()> {
 
     let container_client = service_client.blob_container_client(container_name);
 
-    //container_client.create(None).await?;
-    //println!("Container created");
+    container_client.create(None).await?;
+    println!("Container created");
 
     let blob_name = "hello_world.txt";
     let blob_client = container_client.blob_client(blob_name);
