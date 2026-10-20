@@ -13,7 +13,7 @@ async fn main() -> anyhow::Result<()> {
     
     let account_name: &str = &std::env::var("AZURE_STORAGE_ACCOUNT")
         .context("Error loading Azure storage account")?;
-    let container_name: &str = "hello_world_container";
+    let container_name: &str = "hello-world";
 
     let service_url = Url::parse(&format!("https://{}.blob.core.windows.net", account_name))?;
 
